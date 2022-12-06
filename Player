@@ -1,0 +1,42 @@
+public class Player {
+    private String name;
+    private Element any;
+    
+    public Player(String naname, Element eelement)
+    {
+        name = naname;
+        
+        any = eelement;
+    }
+    
+    public int getPower()
+    {
+        return any.getPower();
+    }
+    
+    public String getName()
+    {
+        return any.getName();
+    }
+    
+    public void setPower(int power)
+    {
+        any.setPower(power);  
+    }
+    
+    
+    public void powerUp(int ppower)
+    {
+        any.powerUp(ppower);
+    }
+    
+    public void elementalLevel(String nname, int ppower)
+    {
+        any.elementalLevel(nname,ppower);
+    }
+    
+    public void elementInfo(String nname)
+    {
+        any.elementInfo(nname);
+    }
+}
