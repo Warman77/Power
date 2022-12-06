@@ -1,0 +1,110 @@
+import java.util.Scanner;
+public class MyProgram
+{
+    public static void main(String[] args)
+    {
+        Scanner input = new Scanner(System.in);
+        
+        System.out.println("Welcome fighters to the tournament of power");
+        
+        System.out.println("fighters enter your names:");
+        
+        System.out.println("Fighter 1: ");
+        
+        String fighter = input.nextLine();
+        System.out.println("Fighter 2: ");
+        String fighter2 = input.nextLine();
+        
+        
+        System.out.println("Now both of you select a element here are your options:");
+        
+        System.out.println("Earth, Wind, Fire and Water ");
+        
+        System.out.println("");
+        
+        System.out.println(fighter +" choose:");
+        
+        String name = input.nextLine();
+        
+        System.out.println("");
+        
+        System.out.println(fighter2 +" choose:");
+        
+        String name2 = input.nextLine();
+        
+        //System.out.println("now choose a power level of your elements");
+        
+        System.out.println("");
+        
+        int pow = 0;
+        
+        System.out.println(fighter +" power starts at " + pow);
+        
+        //first.elementInfo(name);
+        
+        System.out.println("");
+        
+        int pow2 = 0;
+        
+        System.out.println(fighter2 +" power starts at " + pow);
+        
+        System.out.println("");
+        
+        //second.elementInfo(name2);
+        
+        Element play = new Element(name, pow);
+        
+        Element play2 = new Element(name2, pow2);
+        
+        Player first = new Player(name, play);
+        
+        Player second = new Player(name2, play2);
+        
+        first.elementalLevel(name,pow);
+        
+        first.powerUp(pow);
+        
+        second.powerUp(pow2);
+        
+        System.out.print(fighter);
+        
+        first.elementInfo(name);
+        
+        //System.out.print(" because of his element of " + name);
+        
+        System.out.println("");
+        
+        System.out.print(fighter2);
+        
+        second.elementInfo(name2);
+        
+        //System.out.print(" because of his element of " + name2);
+        
+        System.out.println("");
+        
+        //System.out.println(fighter + first.elementInfo(name));
+        
+        System.out.println("time for these two fighters to get a random power boost");
+        
+        System.out.println(fighter + " your level was at " + pow + " now its at " + first.getPower() + " thanks to your elemental first performace boost and the masters boost ");
+        
+        System.out.println("");
+        
+        System.out.println(fighter2 + " your level was at " + pow2 + " now its at " + second.getPower() + " thanks to your elemental first performace boost and the masters boost ");
+        
+        System.out.println("");
+        
+        if(first.getPower() > second.getPower())
+        {
+            System.out.println("The champion of the tournemnet of power " + fighter +" with a power of " + first.getPower() + " vs " + fighter2 +"s " + "power of " + second.getPower());
+        }
+        else if(first.getPower() == second.getPower())
+        {
+            System.out.println("wow both of you tied");
+        }
+        else if(first.getPower() < second.getPower())
+        {
+            System.out.println("The champion of the tournemnet of power " + fighter2 +" with a power of " + second.getPower() + " vs " + fighter +"s " + "power of " + first.getPower());
+        }
+    }
+}
